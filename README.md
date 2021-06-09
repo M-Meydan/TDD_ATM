@@ -1,2 +1,2 @@
 # ATM
-ATM provides money transfer and withdrawal funtionalities
+ATM provides money transfer and withdrawal functions
