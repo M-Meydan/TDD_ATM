@@ -64,20 +64,21 @@ The Swoop Core API (also known as the Swoop Classic API) is an ASP.NET Web API p
 	Set policy temporarly or permenantly e.g.  Set-ExecutionPolicy unrestricted
 
 	If you get error below:
+	
 	--------------------------------------- Build SQL project ---------------------------------------
 	Could not execute because the application was not found or a compatible .NET SDK is not installed.
 
 	You need to install .net sdk. E.g. [dotnet-sdk-3.1.411-win-x64](https://download.visualstudio.microsoft.com/download/pr/842e20e5-8cd4-4fe1-bdc5-5d27a45552dd/5660663ac2e8747101d040c7764a79c2/dotnet-sdk-3.1.117-win-x64.exe)
 	
- * Run Swoop.Core API solution as Admin in VS.
+ * Swoop.Core API cannot be loaded in the solution
    	* Before you run solution make sure IIS installed and enable WCF http Activation.
-	* Restart VS in admin mode and Load project, got to web tab and create virtual directory.
+	* Restart VS in admin mode to load the project, then to web tab and create virtual directory.
 	
 	Hawk site is created under Default Web Site on IIS and points to path: local path e.g. C:\Projects\swoop-ltd\swoop-api\src\Swoop.Core.Api
 	
 	If above doesn’t work create website manually on IIS.
 	
-	Create app pool, make sure configure Https binding at Default site configured.
+	Create app pool, make sure to configure Https binding at Default site then try reloading the solution in Admin mode.
    
  * Build Error
 	
@@ -88,6 +89,7 @@ The Swoop Core API (also known as the Swoop Classic API) is an ASP.NET Web API p
  * Run Swoop.Databse Solution
     
 	If you get below error:
+	
 	Your project does not reference ".NETFramework,Version=v4.8" framework.
 	Add a reference to ".NETFramework,Version=v4.8" in the "TargetFrameworks" property of your project file and then re-run NuGet restore.
 	
